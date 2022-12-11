@@ -1,6 +1,5 @@
 const products = [
   {
-    id: 1,
     title: "Beef - Rouladin, Sliced",
     description: "Fusion of Right Shoulder Joint with Synth Sub, Open Approach",
     price: 147.92,
@@ -19,7 +18,6 @@ const products = [
     ],
   },
   {
-    id: 2,
     title: "Pork - Bacon, Sliced",
     description: "Removal of Autol Sub from Diaphragm, Open Approach",
     price: 128.48,
@@ -38,7 +36,6 @@ const products = [
     ],
   },
   {
-    id: 3,
     title: "Chestnuts - Whole,canned",
     description: "Dilation of Right Ventricle, Open Approach",
     price: 264.33,
@@ -57,7 +54,6 @@ const products = [
     ],
   },
   {
-    id: 4,
     title: "Garbage Bags - Black",
     description: "Destruction of Right Hip Bursa and Ligament, Perc Approach",
     price: 72.23,
@@ -76,7 +72,6 @@ const products = [
     ],
   },
   {
-    id: 5,
     title: "Rice Wine - Aji Mirin",
     description: "Occlusion of Azygos Vein, Percutaneous Endoscopic Approach",
     price: 127.65,
@@ -95,7 +90,6 @@ const products = [
     ],
   },
   {
-    id: 6,
     title: "Grapes - Green",
     description: "Supplement L Metatarsophal Jt w Synth Sub, Perc Endo",
     price: 156.36,
@@ -114,7 +108,6 @@ const products = [
     ],
   },
   {
-    id: 7,
     title: "Tomatoes - Yellow Hot House",
     description: "Drainage of Face with Drainage Device, Perc Endo Approach",
     price: 121.62,
@@ -133,7 +126,6 @@ const products = [
     ],
   },
   {
-    id: 8,
     title: "Skirt - 29 Foot",
     description: "Replacement of L Kidney Pelvis with Autol Sub, Open Approach",
     price: 151.47,
@@ -152,7 +144,6 @@ const products = [
     ],
   },
   {
-    id: 9,
     title: "Vegetable - Base",
     description: "Insert Radioact Elem in L Inguinal Region, Perc",
     price: 259.6,
@@ -171,7 +162,6 @@ const products = [
     ],
   },
   {
-    id: 10,
     title: "Silicone Paper 16.5x24",
     description: "Reposition Right Radius, Percutaneous Approach",
     price: 245.16,
@@ -190,7 +180,6 @@ const products = [
     ],
   },
   {
-    id: 11,
     title: "Anchovy Fillets",
     description: "Introduce Monoclonal Antibody in Bil/Panc Tract, Via Opening",
     price: 39.0,
@@ -209,7 +198,6 @@ const products = [
     ],
   },
   {
-    id: 12,
     title: "Milk - 2%",
     description: "Revision of Synth Sub in R Tibia, Perc Endo Approach",
     price: 172.48,
@@ -228,7 +216,6 @@ const products = [
     ],
   },
   {
-    id: 13,
     title: "Beans - Navy, Dry",
     description: "Supplement Left Zygomatic Bone with Autol Sub, Perc Approach",
     price: 236.91,
@@ -247,7 +234,6 @@ const products = [
     ],
   },
   {
-    id: 14,
     title: "Bag - Bread, White, Plain",
     description: "Repair Inferior Mesenteric Vein, Percutaneous Approach",
     price: 48.94,
@@ -266,7 +252,6 @@ const products = [
     ],
   },
   {
-    id: 15,
     title: "Bread - Italian Roll With Herbs",
     description: "Occlusion L Hepatic Duct w Intralum Dev, Perc Endo",
     price: 179.03,
@@ -285,7 +270,6 @@ const products = [
     ],
   },
   {
-    id: 16,
     title: "Onions - Pearl",
     description: "Extraction of Left Sphenoid Sinus, Perc Endo Approach",
     price: 98.36,
@@ -304,7 +288,6 @@ const products = [
     ],
   },
   {
-    id: 17,
     title: "Cake - Dulce De Leche",
     description: "Removal of Intralum Dev from Hepatobil Duct, Extern Approach",
     price: 156.52,
@@ -323,7 +306,6 @@ const products = [
     ],
   },
   {
-    id: 18,
     title: "Clams - Bay",
     description: "Dilation of L Com Carotid, Bifurc, Open Approach",
     price: 183.52,
@@ -342,7 +324,6 @@ const products = [
     ],
   },
   {
-    id: 19,
     title: "Pasta - Lasagne, Fresh",
     description: "Drainage of Right Extraocular Muscle, Open Approach",
     price: 152.23,
@@ -361,7 +342,6 @@ const products = [
     ],
   },
   {
-    id: 20,
     title: "Carbonated Water - Peach",
     description: "Resection of Head Muscle, Open Approach",
     price: 280.77,
@@ -380,7 +360,6 @@ const products = [
     ],
   },
   {
-    id: 21,
     title: "Mountain Dew",
     description: "Dilation of L Ulnar Art with 4+ Intralum Dev, Perc Approach",
     price: 252.34,
@@ -399,7 +378,6 @@ const products = [
     ],
   },
   {
-    id: 22,
     title: "Water - Perrier",
     description: "Excision of L Low Extrem Lymph, Perc Endo Approach, Diagn",
     price: 31.16,
@@ -418,7 +396,6 @@ const products = [
     ],
   },
   {
-    id: 23,
     title: "Beef Dry Aged Tenderloin Aaa",
     description: "Fusion 2-4 L Jt w Autol Sub, Post Appr A Col, Open",
     price: 142.73,
@@ -437,7 +414,6 @@ const products = [
     ],
   },
   {
-    id: 24,
     title: "Sesame Seed",
     description: "Supplement Ampulla Vater with Synth Sub, Perc Endo Approach",
     price: 58.54,
@@ -456,7 +432,6 @@ const products = [
     ],
   },
   {
-    id: 25,
     title: "Wine - Chianti Classica Docg",
     description: "Supplement L Lg Intest with Synth Sub, Perc Endo Approach",
     price: 100.69,
@@ -475,7 +450,6 @@ const products = [
     ],
   },
   {
-    id: 26,
     title: "Plaintain",
     description: "Dilation of Inf Mesent Art with 2 Drug-elut, Perc Approach",
     price: 209.16,
@@ -494,7 +468,6 @@ const products = [
     ],
   },
   {
-    id: 27,
     title: "Beer - Corona",
     description: "Replace of L Ext Iliac Vein with Nonaut Sub, Open Approach",
     price: 88.56,
@@ -513,7 +486,6 @@ const products = [
     ],
   },
   {
-    id: 28,
     title: "Vaccum Bag 10x13",
     description: "Excision of Right Upper Leg, Percutaneous Approach, Diagn",
     price: 44.22,
@@ -532,7 +504,6 @@ const products = [
     ],
   },
   {
-    id: 29,
     title: "Muffin Orange Individual",
     description: "Repair Right Fallopian Tube, Perc Endo Approach",
     price: 44.05,
@@ -551,7 +522,6 @@ const products = [
     ],
   },
   {
-    id: 30,
     title: "Pasta - Cheese / Spinach Bauletti",
     description: "Release Left Foot Artery, Percutaneous Approach",
     price: 255.39,
