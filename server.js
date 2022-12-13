@@ -2,16 +2,24 @@ import Express from "express";
 import dotenv from "dotenv";
 import connectDatabase from "./config/MongoDB.js";
 import ImportData from "./DataImport.js";
-import productRoute from "./routes/Product.routes.js";
+import productRouter from "./routes/Product.routes.js";
+import userRouter from "./routes/User.routes.js";
+import { notFound, errorHandler } from "./Middleware/Errors.js";
 
 dotenv.config();
 connectDatabase();
 const app = Express();
+app.use(Express.json());
 
 // api
 
 app.use("/api/import", ImportData);
-app.use("/api/products", productRoute);
+app.use("/api/products", productRouter);
+app.use("/api/users", userRouter);
+
+// error handler
+app.use(notFound);
+app.use(errorHandler);
 
 // // load product from serverside
 // app.get("/api/products", (req, res) => {
