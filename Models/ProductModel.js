@@ -4,29 +4,29 @@ const productSchema = mongoose.Schema(
   {
     title: {
       type: String,
-      require: true,
+      required: true,
     },
     imagesMain: {
       type: Array,
-      require: true,
+      required: true,
     },
     description: {
       type: String,
-      require: true,
+      required: true,
     },
     price: {
       type: Number,
-      require: true,
+      required: true,
       default: 0,
     },
     discount: {
       type: Number,
-      require: true,
+      required: true,
       default: 0,
     },
     Stock: {
       type: Number,
-      require: true,
+      required: true,
       default: 0,
     },
   },
