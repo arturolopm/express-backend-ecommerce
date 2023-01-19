@@ -41,17 +41,6 @@ orderRouter.post(
   })
 );
 
-// get Orders list
-orderRouter.get(
-  "/",
-  protect,
-  asyncHandler(async (req, res) => {
-    const order = await Order.find({ user: req.user._id }).sort({ id: -1 });
-
-    res.json(order);
-  })
-);
-
 // get Order
 orderRouter.get(
   "/:id",
@@ -94,6 +83,16 @@ orderRouter.put(
       res.status(404).json(createOrder);
       throw new Error("Order not found");
     }
+  })
+);
+// get Orders list
+orderRouter.get(
+  "/",
+  protect,
+  asyncHandler(async (req, res) => {
+    const order = await Order.find({ user: req.user._id }).sort({ id: -1 });
+
+    res.json(order);
   })
 );
 
