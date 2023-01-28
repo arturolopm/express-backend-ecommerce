@@ -21,6 +21,9 @@ app.use("/api/orders", orderRouter);
 app.get("/api/config/paypal", (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID);
 });
+app.get("/api/config/epayco", (req, res) => {
+  res.send(process.env.EPAYCO_CLIENT_ID);
+});
 
 // error handler
 app.use(notFound);
@@ -40,6 +43,6 @@ app.get("/", (req, res) => {
   res.send("API Running");
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, console.log(`server running on port ${PORT}`));
+app.listen(PORT, "192.168.0.5", console.log(`server running on port ${PORT}`));

@@ -12,7 +12,7 @@ export const getAllProducts = asyncHandler(async (req, res) => {
         },
       }
     : {};
-  if (keyword.title.$regex == "undefined") {
+  if (keyword.title.$regex === "undefined") {
     const count = await Product.countDocuments({});
     const products = await Product.find({})
       .limit(pageSize)
