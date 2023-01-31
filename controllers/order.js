@@ -1,5 +1,6 @@
 // controllers/order.js
 import asyncHandler from "express-async-handler";
+import mercadopago from "mercadopago";
 import protect from "../Middleware/AuthMiddleware.js";
 import Order from "../Models/OrderModel.js";
 
@@ -73,4 +74,35 @@ export const getOrders = asyncHandler(async (req, res) => {
   const order = await Order.find({ user: req.user._id }).sort({ id: -1 });
 
   res.json(order);
+});
+
+export const orderMP = asyncHandler(async (req, res) => {
+  mercadopago.configure({ access_token: process.env.ACCESS_TOKEN });
+  const order = await Order.findById(req.params.id);
+
+  const itemsPreference = order.orderItems.map((orderItems) => ({
+    id: orderItems.product._id,
+    title: orderItems.title,
+    currency_id: "COP",
+    picture_url:
+      "https://fastly.picsum.photos/id/1041/200/200.jpg?hmac=1CDPtzGhHDqltV1i3b5YV4hY9UYY_6ubvXbxJO9QchQ",
+    description: "Try",
+    category_id: "art",
+    quantity: orderItems.quantity,
+    unit_price: orderItems.price * (1 - orderItems.discount),
+  }));
+  const preference = {
+    items: itemsPreference,
+    back_urls: {
+      success: `http://localhost:5000/orders/${order._id}`,
+      failure: `http://localhost:5000/orders/${order._id}`,
+      pending: `http://localhost:5000/orders/${order._id}`,
+    },
+    auto_return: "approved",
+    binary_mode: true,
+  };
+  mercadopago.preferences
+    .create(preference)
+    .then((response) => res.status(200).send({ response }))
+    .catch((error) => res.status(500).send({ error: error.message }));
 });
