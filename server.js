@@ -5,11 +5,14 @@ import ImportData from "./DataImport.js";
 import productRouter from "./routes/Product.routes.js";
 import userRouter from "./routes/User.routes.js";
 import orderRouter from "./routes/Order.routes.js";
+import mercadopago from "mercadopago";
 import { notFound, errorHandler } from "./Middleware/Errors.js";
 
 dotenv.config();
 connectDatabase();
+
 const app = Express();
+mercadopago.configure({ access_token: process.env.ACCESS_TOKEN });
 app.use(Express.json());
 
 // api
@@ -43,10 +46,6 @@ app.get("/", (req, res) => {
   res.send("API Running");
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5000;
 
-app.listen(
-  PORT,
-
-  console.log(`server running on port ${PORT}`)
-);
+app.listen(PORT, console.log(`server running on port ${PORT}`));

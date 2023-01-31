@@ -89,14 +89,14 @@ export const orderMP = asyncHandler(async (req, res) => {
     description: "Try",
     category_id: "art",
     quantity: orderItems.quantity,
-    unit_price: orderItems.price * (1 - orderItems.discount),
+    unit_price: parseInt(orderItems.price * (1 - orderItems.discount)),
   }));
   const preference = {
     items: itemsPreference,
     back_urls: {
-      success: `http://localhost:5000/orders/${order._id}`,
-      failure: `http://localhost:5000/orders/${order._id}`,
-      pending: `http://localhost:5000/orders/${order._id}`,
+      success: `http://localhost:5173/orders/${order._id}`,
+      failure: `http://localhost:5173/orders/${order._id}`,
+      pending: `http://localhost:5173/orders/${order._id}`,
     },
     auto_return: "approved",
     binary_mode: true,
