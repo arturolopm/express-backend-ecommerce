@@ -1,4 +1,5 @@
 // controllers/order.js
+import { json, response } from "express";
 import asyncHandler from "express-async-handler";
 import mercadopago from "mercadopago";
 import protect from "../Middleware/AuthMiddleware.js";
@@ -32,7 +33,6 @@ export const createOrder = asyncHandler(async (req, res) => {
     const createOrder = await order.save();
     res.status(201).json(createOrder);
   }
-  console.log(res.status);
 });
 
 export const getOrder = asyncHandler(async (req, res) => {
@@ -70,6 +70,46 @@ export const payOrder = asyncHandler(async (req, res) => {
   }
 });
 
+export const payOrderMP = asyncHandler(async (req, res) => {
+  const order = await Order.findById(req.params.id).populate(
+    "user",
+    "name email"
+  );
+  const payment_id = req.body.payment_id;
+  const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
+  const getPaymentStatus = async () => {
+    await fetch(`https://api.mercadopago.com/v1/payments/${payment_id}`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${ACCESS_TOKEN}`,
+      },
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.status === "approved") {
+          if (order) {
+            order.isPaid = true;
+            order.paidAt = Date.now();
+            order.paymentResult = {
+              id: result.id,
+              status: 200,
+              update_time: Date.now(),
+              email_address: result.payer.email,
+            };
+
+            const updatedOrder = async () => await order.save();
+
+            res.json(updatedOrder());
+          } else {
+            res.status(404).json(createOrder);
+            throw new Error("Order not found");
+          }
+        }
+      });
+  };
+  getPaymentStatus();
+});
+
 export const getOrders = asyncHandler(async (req, res) => {
   const order = await Order.find({ user: req.user._id }).sort({ id: -1 });
 
@@ -86,7 +126,7 @@ export const orderMP = asyncHandler(async (req, res) => {
     currency_id: "COP",
     picture_url:
       "https://fastly.picsum.photos/id/1041/200/200.jpg?hmac=1CDPtzGhHDqltV1i3b5YV4hY9UYY_6ubvXbxJO9QchQ",
-    description: "Try",
+    description: "EScultura de jade",
     category_id: "art",
     quantity: orderItems.quantity,
     unit_price: parseInt(orderItems.price * (1 - orderItems.discount)),
@@ -94,9 +134,9 @@ export const orderMP = asyncHandler(async (req, res) => {
   const preference = {
     items: itemsPreference,
     back_urls: {
-      success: `http://localhost:5173/orders/${order._id}`,
-      failure: `http://localhost:5173/orders/${order._id}`,
-      pending: `http://localhost:5173/orders/${order._id}`,
+      success: `http://localhost:5173/order/${order._id}`,
+      failure: `http://localhost:5173/order/${order._id}`,
+      pending: `http://localhost:5173/order/${order._id}`,
     },
     auto_return: "approved",
     binary_mode: true,

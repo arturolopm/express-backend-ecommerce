@@ -7,6 +7,7 @@ import {
   payOrder,
   getOrders,
   orderMP,
+  payOrderMP,
 } from "../controllers/order.js";
 
 const orderRouter = express.Router();
@@ -14,10 +15,13 @@ const orderRouter = express.Router();
 orderRouter.post("/", protect, createOrder);
 
 // get Order
-orderRouter.get("/:id", protect, getOrder);
+orderRouter.get("/:id", getOrder);
 
 // Pay order on DB
 orderRouter.put("/:id/pay", protect, payOrder);
+
+// Pay order on DB
+orderRouter.put("/:id/payMP", protect, payOrderMP);
 
 // get Orders list
 orderRouter.get("/", protect, getOrders);
