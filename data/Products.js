@@ -2,7 +2,7 @@ const products = [
   {
     title: "Jade Gato",
     description:
-      "El gato de jade es una delicada y complicada escultura, con cada detalle fino tallado a la perfección. La piedra verde y sus detalles hacien que el gato parezca casi vivo.",
+      "Símbolo de poder, astucia inteligencia e intuición, el gato en Jade será el perfecto complemento para tus espacios favoritos.",
     price: 187500,
     discount: 0.2,
     imagesMain: ["/gato1.jpeg", "/gato2.jpeg", "/gato3.jpeg", "/gato4.jpeg"],
@@ -11,7 +11,7 @@ const products = [
   {
     title: "Cubo Jade",
     description:
-      "El cubo de jade es una pieza abstracta y elegante, con sus líneas limpias y suave superficie que llama la atención. El color verde profundo del jade es un contraste llamativo contra las líneas limpias del cubo",
+      "Representa aspectos fundamentales como la solidez, lo invariable, todo lo firme y simétrico. 10cm x 10cm x 10cm",
     price: 287500,
     discount: 0.2,
     imagesMain: ["/cubo2.jpeg", "/cubo1.jpeg"],
@@ -20,7 +20,7 @@ const products = [
   {
     title: "Búho mistic",
     description:
-      "El búho de jade es una escultura sabia y misteriosa, con sus expresivos ojos y detalladas plumas talladas con pericia en la piedra. El color verde natural del jade agrega una sensación de serenidad a la pieza, convirtiéndola en una excelente adición para cualquier hogar.",
+      "El arte de saber esculpir jade y convertirlo en piezas decorativas es un lujo que no puede puede faltar en tu hogar. 12 cm de alto +9 cm de ancho",
     price: 414285,
     discount: 0.3,
     imagesMain: ["/buho1.jpeg", "/buho2.jpeg", "/buho3.jpeg", "/buho4.jpeg"],
@@ -29,7 +29,7 @@ const products = [
   {
     title: "Pirámide",
     description:
-      "La pirámide de jade es un símbolo de la civilización antigua y el misterio. La superficie suave de la pirámide refleja la luz de manera hermosa, convirtiéndola en una pieza decorativa perfecta para cualquier habitación",
+      "Llena de la fuerza de la naturaleza,la piramide nos trasnmite elegancia pero mas que eso,conocimiento y fuerza del espiritu. 10 cm de alto x 10 ancho",
     price: 190000,
     discount: 0,
     imagesMain: [
@@ -48,7 +48,7 @@ const products = [
   {
     title: "Esfera tallada en Jade",
     description:
-      "La esfera de jade es una pieza sencilla pero elegante. La superficie brillante de la esfera es una perfecta reflexión de la belleza natural de la piedra de jade.",
+      "Armoniza tus espacios ,inspira plenitud, bienestar y elegancia en una sola figura. 13 cm de alto x 33 cm en total",
     price: 337500,
     discount: 0.2,
     imagesMain: [
@@ -67,7 +67,7 @@ const products = [
   {
     title: "Escultura rinoceronte",
     description:
-      "El rinoceronte de jade es una escultura poderosa y majestuosa. Los detalles intrincados de la piel a prueba de balas y el cuerno del rinoceronte están tallados con pericia en la piedra, convirtiéndola en una pieza verdaderamente impresionante.",
+      "El rinoceronte es un símbolo de fuerza, emociones desenfrenadas, poder, confianza en sí mismo, seguridad y protección. 13.5 cm largo x 5 ancho y 8.5 de alto",
     price: 312500,
     discount: 0.2,
     imagesMain: [
@@ -86,7 +86,7 @@ const products = [
   {
     title: "Perro sunquwan",
     description:
-      "El perro de jade es una escultura juguetona y verdadera, con sus detales y expresión capturados en la piedra. El jade aporta una sensación de calma y tranquilidad a la pieza, convirtiéndola en una excelente adición para cualquier hogar.",
+      "No solo significa fidelidad los perros tienen una energía protectora y sanadora, no te quedes sin la representación del amor y del cuidado con tu perro en jade.",
     price: 187500,
     discount: 0.2,
     imagesMain: [
@@ -105,7 +105,7 @@ const products = [
   {
     title: "Figura de elefante",
     description:
-      "El elefante de jade es una impresionante escultura que captura la grandeza y majestuosidad de esta criatura. El jade verde profundo resalta la textura del cuerpo y las características faciales del elefante, haciendo que parezca que está en movimiento. La talla cuidadosa y detallada del elefante lo convierte en una pieza artística verdaderamente impresionante.",
+      "SALUD, BIENESTAR Y FUERZA,TALLADO A MANO Y CON LAS MEJORES PIEDRAS DE JADE ,UN LUJO QUE NO TE PUEDE FALTAR. 10 ALTO X 10 DE LARGO",
     price: 337500,
     discount: 0.2,
     imagesMain: [
