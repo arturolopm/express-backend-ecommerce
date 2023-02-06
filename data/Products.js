@@ -17,6 +17,7 @@ const products = [
     imagesMain: ["/cubo2.jpeg", "/cubo1.jpeg"],
     imagesSmall: ["/cubo2.jpeg", "/cubo1.jpeg"],
   },
+
   {
     title: "Búho mistic",
     description:
